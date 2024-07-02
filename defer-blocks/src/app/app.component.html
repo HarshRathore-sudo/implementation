@@ -1,0 +1,55 @@
+<div>
+    <div>{{ title }}</div>
+    <div #greeting>Hello!</div>
+    <div>
+        @defer( on interaction) {
+            <app-defered></app-defered>
+        }@placeholder {
+            <span>On Interaction</span>
+        }
+
+        @defer(on viewport) {
+            <app-defered></app-defered>
+        }@placeholder {
+            <span>On Viewport</span>
+        }
+
+        @defer(when true){
+            <app-defered></app-defered>
+        }@placeholder {
+            <span>Based on a when condition</span>
+        }
+
+        @defer(on viewport(greeting)){
+            <app-defered></app-defered>
+        }@placeholder {
+            <span>On Viewport based on greeting</span>
+        }
+
+        @defer(on interaction(greeting)){
+            <app-defered></app-defered>
+        }@placeholder {
+            <span>On Interaction based on greeting</span>
+        }
+
+        @defer(on hover){
+            <app-defered></app-defered>
+        }@placeholder {
+            <span>On Hover</span>
+        }
+
+        @defer(on hover(greeting)){
+            <app-defered></app-defered>
+        }@placeholder {
+            <span>On Hover based on greeting</span>
+        }
+
+        @defer (on timer(3s)){
+            <app-defered></app-defered>
+        }@placeholder {
+            <span>On Timer</span>
+        }
+
+
+    </div>
+</div>
